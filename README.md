@@ -23,12 +23,23 @@ Bu proje, Fonet Bilgi Teknolojileri A.Ş.'nin Java Geliştirici aday değerlendi
 ## 🧪 Kurulum
 
 1. Bu repoyu klonlayın:
-```bash
+ ```bash
+
 git clone https://github.com/bcerkezler/emlak-yonetim-sistemi.git
 cd emlak-yonetim-sistemi
+
+```
 2. IDE ile açın (IntelliJ / Eclipse)
 3. application.properties dosyasını ayarlayın (H2 ya da PostgreSQL)
 4. Projeyi çalıştırın:
+```bash
+
 mvn spring-boot:run
+
+```
 5. Uygulama arayüzü:
+```bash
+
 http://localhost:8080/
+
+```
