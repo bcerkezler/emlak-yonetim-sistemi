@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Emlak Yönetim Sistemi</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">🏠 Emlak Yönetim Sistemi Ana Sayfa</h1>
+
+    <div class="list-group">
+      <a th:href="@{/isyeri}" class="list-group-item list-group-item-action">🏢 İşyeri Bilgisi</a></li>
+      <a th:href="@{/musteri/ekle}" class="list-group-item list-group-item-action">➕ Müşteri Ekle</a></li>
+      <a th:href="@{/musteri/liste}" class="list-group-item list-group-item-action">📄 Müşteri Listesi</a></li>
+      <a th:href="@{/emlak/ekle}" class="list-group-item list-group-item-action">➕ Emlak Ekle</a></li>
+      <a th:href="@{/arama}" class="list-group-item list-group-item-action">🔍 Emlak Arama</a></li>
+    <div>
+  </div>
+
+</body>
+</html>

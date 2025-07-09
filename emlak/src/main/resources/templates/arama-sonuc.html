@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Arama Sonuçları</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <h2 class="mb-4">🔎 Arama Sonuçları</h2>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th>Tür</th>
+            <th>Durum</th>
+            <th>Oda Sayısı</th>
+            <th>Isınma</th>
+            <th>Metrekare</th>
+            <th>Kat</th>
+            <th>Bina Katı</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="emlak : ${sonuclar}">
+            <td th:text="${emlak.tur}"></td>
+            <td th:text="${emlak.durum}"></td>
+            <td th:text="${emlak.odaSayisi}"></td>
+            <td th:text="${emlak.isinma}"></td>
+            <td th:text="${emlak.metrekare}"></td>
+            <td th:text="${emlak.kat}"></td>
+            <td th:text="${emlak.binaKat}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <p><a th:href="@{/}" class="btn btn-outline-secondary">🏠 Ana Sayfaya Dön</a></p>
+</div>
+</body>
+</html>

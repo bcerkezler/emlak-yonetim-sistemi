@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Emlak Ekle</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <h2>➕ Yeni Emlak Ekle</h2>
+
+    <form th:action="@{/emlak/ekle}" th:object="${emlak}" method="post" class="row g-3 mt-3">
+        <div class="col-md-4">
+            <label class="form-label">Tür</label>
+            <input type="text" th:field="*{tur}" class="form-control"/>
+        </div>
+        <div class="col-md-4">
+            <label class="form-label">Durum</label>
+            <input type="text" th:field="*{durum}" class="form-control"/>
+        </div>
+        <div class="col-md-4">
+            <label class="form-label">Oda Sayısı</label>
+            <input type="number" th:field="*{odaSayisi}" class="form-control"/>
+        </div>
+        <div class="col-md-4">
+            <label class="form-label">Isınma Türü</label>
+            <input type="text" th:field="*{isinma}" class="form-control"/>
+        </div>
+        <div class="col-md-4">
+            <label class="form-label">Metrekare</label>
+            <input type="number" th:field="*{metrekare}" step="0.01" class="form-control"/>
+        </div>
+        <div class="col-md-4">
+            <label class="form-label">Kat</label>
+            <input type="number" th:field="*{kat}" class="form-control"/>
+        </div>
+        <div class="col-md-4">
+            <label class="form-label">Bina Katı</label>
+            <input type="number" th:field="*{binaKat}" class="form-control"/>
+        </div>
+        <div class="col-md-4">
+            <label class="form-label">Müşteri</label>
+            <select th:field="*{musteri}" class="form-select">
+                <option th:each="m : ${musteriler}" th:value="${m.id}" th:text="${m.ad + ' ' + m.soyad}"></option>
+            </select>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-success">Kaydet</button>
+        </div>
+    </form>
+
+    <p class="mt-4"><a th:href="@{/}" class="btn btn-outline-secondary">🏠 Ana Sayfaya Dön</a></p>
+</div>
+</body>
+</html>
